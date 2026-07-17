@@ -1,0 +1,5 @@
+Write a program that accepts a person's full name and returns the initials by taking the first letter of each word and converting them to uppercase.
+
+{
+   "fullName": "Nagaraju Kshathriya Raghunathrao"
+}
