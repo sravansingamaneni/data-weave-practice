@@ -1,0 +1,19 @@
+%dw 2.0
+output application/json
+
+var input1=[
+  {"id": 1, "name": "Alice"},
+  {"id": 2, "name": "Bob"}
+]
+
+var input2=[
+  {"id": 2, "age": 25},
+  {"id": 1, "age": 30}
+]
+
+---
+input1 map ((item, index) -> {
+    id: item.id,
+    name:item.name,
+    age: (input2 filter $.id ==item.id)[0].age
+})
